@@ -11,12 +11,7 @@ import random
 from colorama import Fore
 import emoji as ej
 import user_agent
-from colorama import Fore
-from timeit import default_timer as timer
-from pystyle import Center, Colorate, Colors
-import ctypes
 
-ctypes.windll.kernel32.SetConsoleTitleW(f"Leaked by .gg/opiumtools Proxy and Tweety on top")
 
 colorama.init()
 
@@ -54,8 +49,9 @@ class Start:
 
             cookies(self)
 
-            tokens = open('input/tokens.txt', 'r').read().splitlines()
+            tokens = open('tokens.txt', 'r').read().splitlines()
             token = random.choice(tokens)
+
             headers = {
                     'Accept': '*/*',
                     'Accept-Encoding': 'gzip, deflate, br',
@@ -89,7 +85,7 @@ class Start:
             try:
                 cookies(self)
 
-                tokens = open('input/tokens.txt', 'r').read().splitlines()
+                tokens = open('tokens.txt', 'r').read().splitlines()
                 token = random.choice(tokens)
 
                 headers = {
@@ -160,9 +156,9 @@ class Start:
             try:
                 cookies(self)
 
-                tokens = open('input/tokens.txt', 'r').read().splitlines()
+                tokens = open('tokens.txt', 'r').read().splitlines()
                 token = random.choice(tokens)
-                ids = open('input/ids.txt', 'r').read().splitlines()
+                ids = open('ids.txt', 'r').read().splitlines()
                 idd = random.choice(ids)
 
                 headers = {
@@ -229,7 +225,7 @@ class Start:
                 print(f'[{Fore.BLUE}/{Fore.RESET}]> {Fore.YELLOW} Sending Message From: [{Fore.BLUE}{token[:19]}*****{Fore.RESET}] [{Fore.BLUE}{self.message}{Fore.RESET}] [{Fore.RED}{str(random.randint(999999999, 999999999999999999))}{Fore.RESET}]')
                 print(f'[{Fore.BLUE}+{Fore.RESET}]{Fore.GREEN}  Message Sent!')
 
-                with open('input/ids.txt', 'r+') as f:
+                with open('ids.txt', 'r+') as f:
                     lines = f.readlines()
                     f.seek(0)
                     for line in lines:
@@ -276,7 +272,7 @@ class Start:
 
             cookies(self)
 
-            tokens = open('input/tokens.txt', 'r').read().splitlines()
+            tokens = open('tokens.txt', 'r').read().splitlines()
             token = random.choice(tokens)
 
             headers = {
@@ -307,7 +303,7 @@ class Start:
             print(f'   [{Fore.RED}Pulse{Fore.RESET}]> Changed Bio from [{Fore.RED}{token[:19]}*****{Fore.RESET}] to - [{Fore.RED}{self.bio}{Fore.RESET}] [{Fore.RED}{str(random.randint(999999999, 999999999999999999))}{Fore.RESET}] {response.status_code}')
 
         def check(self):
-            tokens = open('input/tokens.txt', 'r').read().splitlines()
+            tokens = open('tokens.txt', 'r').read().splitlines()
             token = random.choice(tokens)
 
             response = requests.get('https://discord.com/api/v9/users/@me/library', headers={"accept": "*/*","accept-encoding": "gzip, deflate, br","accept-language": "en-US,en;q=0.9","authorization": token,"cookie": "__dcfduid=88221810e37411ecb92c839028f4e498; __sdcfduid=88221811e37411ecb92c839028f4e498dc108345b16a69b7966e1b3d33d2182268b3ffd2ef5dfb497aef45ea330267cf; locale=en-US; OptanonConsent=isIABGlobal=false&datestamp=Fri+Jun+03+2022+15%3A36%3A59+GMT-0400+(Eastern+Daylight+Time)&version=6.33.0&hosts=&landingPath=https%3A%2F%2Fdiscord.com%2F&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1; __stripe_mid=3a915c95-4cf7-4d27-9d85-cfea03f7ce829a88e5; __stripe_sid=b699111a-a911-402d-a08a-c8801eb0f2e8baf912; __cf_bm=nEUsFi1av6PiX4cHH1PEcKFKot6_MslL4UbUxraeXb4-1654285264-0-AU8vy1OnS/uTMTGu2TbqIGYWUreX3IAEpMo++NJZgaaFRNAikwxeV/gxPixQ/DWlUyXaSpKSNP6XweSVG5Mzhn/QPdHU3EmR/pQ5K42/mYQaiRRl6osEVJWMMtli3L5iIA==","referer": "https://discord.com/channels/967617613960187974/981260247807168532","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-origin","sec-gpc": "1","user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36","x-discord-locale": "en-US","x-super-properties": "eyJvcyI6IldpbmRvd3MiLCJicm93c2VyIjoiQ2hyb21lIiwiZGV2aWNlIjoiIiwic3lzdGVtX2xvY2FsZSI6ImVuLVVTIiwiYnJvd3Nlcl91c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMi4wLjUwMDUuNjEgU2FmYXJpLzUzNy4zNiIsImJyb3dzZXJfdmVyc2lvbiI6IjEwMi4wLjUwMDUuNjEiLCJvc192ZXJzaW9uIjoiMTAiLCJyZWZlcnJlciI6IiIsInJlZmVycmluZ19kb21haW4iOiIiLCJyZWZlcnJlcl9jdXJyZW50IjoiIiwicmVmZXJyaW5nX2RvbWFpbl9jdXJyZW50IjoiIiwicmVsZWFzZV9jaGFubmVsIjoic3RhYmxlIiwiY2xpZW50X2J1aWxkX251bWJlciI6MTMwNDEwLCJjbGllbnRfZXZlbnRfc291cmNlIjpudWxsfQ=="}, timeout=5)
@@ -316,7 +312,7 @@ class Start:
             else:
                 print(f"   {Fore.RESET}({Fore.RED}!{Fore.RESET}) Invalid [{Fore.RED}{token[:19]}*****{Fore.RESET}]")
 
-                with open('input/tokens.txt', 'r+') as f:
+                with open('tokens.txt', 'r+') as f:
                     lines = f.readlines()
                     f.seek(0)
                     for line in lines:
@@ -328,7 +324,7 @@ class Start:
 
             cookies(self)
 
-            tokens = open('input/tokens.txt', 'r').read().splitlines()
+            tokens = open('tokens.txt', 'r').read().splitlines()
             token = random.choice(tokens)
             headers = {
                 'Content-Type': 'application/json',
@@ -355,25 +351,37 @@ class Start:
             print(f'   [{Fore.RED}Pulse{Fore.RESET}]> Attempted Verify [{Fore.RED}{token[:19]}*****{Fore.RESET}] [{Fore.RED}{emojiee}{Fore.RESET}] [{Fore.RED}{str(random.randint(999999999, 999999999999999999))}{Fore.RESET}] {r.status_code}')
 
 
-        def ui(self):  
-            print(Center.XCenter(Colorate.Vertical(Colors.green_to_cyan, f"""
-                               _____                           ____        _     __         
-                              / ___/____  ____  ____  ___     / __ \____ _(_)___/ /__  _____
-                              \__ \/_  / / __ \/ __ \/ _ \   / /_/ / __ `/ / __  / _ \/ ___/
-                             ___/ / / /_/ /_/ / / / /  __/  / _, _/ /_/ / / /_/ /  __/ /    
-                            /____/ /___/\____/_/ /_/\___/  /_/ |_|\__,_/_/\__,_/\___/_/     
-                                         Leaked By discord.gg/opiumtools                                                     
-                                        cr1sty.w get fucked by opiumtools                                           
-                                           
-                                  [1] > Server Joiner           [5] > Bio Changer                                          
-                                  [2] > Single Mass DM          [6] > Token Checker
-                                  [3] > Server Mass DM          [7] > Verifier 
-                                  [4] > Name Changer            [8] > ID Scraper
-                                          discord.gg/opiumtools on top
-     """, 1)))
-            choice = input('                                  [Option]->')
-            tokenamount = len(open('input/tokens.txt', 'r').readlines())
-            idamount = len(open('input/ids.txt', 'r').readlines())
+        def ui(self):
+
+            print(f'''{Fore.RED}
+                        
+                    ╔═════════════════════════════════════════════════════════════════════╗
+                    ║ {Fore.RED}    __________                       ____        _     __           ║
+                    ║    / ___/__  /  ____  ____  ___     / __ \____ _(_)___/ /__  _____  ║
+                    ║ {Fore.YELLOW}   \__ \  / /  / __ \/ __ \/ _ \   / /_/ / __ `/ / __  / _ \/ ___/  ║
+                    ║   ___/ / / /__/ /_/ / / / /  __/  / _, _/ /_/ / / /_/ /  __/ /      ║
+                    ║ {Fore.BLUE} /____/ /____/\____/_/ /_/\___/  /_/ |_|\__,_/_/\__,_/\___/_/       ║
+                    ║                                                                     ║
+                    ╚═════════════════════════════════════════════════════════════════════╝  
+                    
+                                                                              [+] by {Fore.BLUE}cr1sty.w
+
+                                                                             {Fore.RESET}
+
+   [{Fore.RED}1{Fore.RESET}] {Fore.RED}>{Fore.RESET} Server Joiner
+   [{Fore.RED}2{Fore.RESET}] {Fore.RED}>{Fore.RESET} Single Mass DM
+   [{Fore.RED}3{Fore.RESET}] {Fore.RED}>{Fore.RESET} Server Mass DM (Use ID Scraper first)
+   [{Fore.RED}4{Fore.RESET}] {Fore.RED}>{Fore.RESET} Display Name Changer
+   [{Fore.RED}5{Fore.RESET}] {Fore.RED}>{Fore.RESET} Bio Changer
+   [{Fore.RED}6{Fore.RESET}] {Fore.RED}>{Fore.RESET} Token Checker
+   [{Fore.RED}7{Fore.RESET}] {Fore.RED}>{Fore.RESET} Verifier
+   [{Fore.RED}8{Fore.RESET}] {Fore.RED}>{Fore.RESET} ID Scraper
+        ''')
+
+            choice = input('   (+) Your Choice:>')
+
+            tokenamount = len(open('tokens.txt', 'r').readlines())
+            idamount = len(open('ids.txt', 'r').readlines())
 
             if choice == '1':
                 self.invite = input(f'     Invite {Fore.RED}>{Fore.RESET} ')
